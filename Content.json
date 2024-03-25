@@ -1,0 +1,99 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {},
+    "Changes": [
+        {
+            "LogName": "Load Pigs",
+            "Action": "Load",
+            "Target": "{{ModId}}/Pink, {{ModId}}/BabyPink, {{ModId}}/BrownKune, {{ModId}}/BabyBrownKune",
+            "FromFile": "assets/Pigs/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+                "Pig": {
+                    "Texture": "{{ModId}}/Pink",
+                    "BabyTexture": "{{ModId}}/BabyPink"
+                }
+            }
+        },
+        {
+            "LogName": "Pig Skins",
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "TargetField": [
+                "Pig",
+                "Skins"
+            ],
+            "Entries": {
+                "{{ModId}}_BrownKune": {
+                    "Id": "{{ModId}}_BrownKune",
+                    "Texture": "{{ModId}}/BrownKune",
+                    "BabyTexture": "{{ModId}}/BabyBrownKune",
+                    "Weight": "1.0"
+                }
+            }
+        },
+        {
+            "LogName": "Load Cows",
+            "Action": "Load",
+            "Target": "{{ModId}}/Brown, {{ModId}}/BabyBrown, {{ModId}}/White, {{ModId}}/BabyWhite, {{ModId}}/Friesian, {{ModId}}/BabyFriesian,{{ModId}}/Highlander, {{ModId}}/BabyHighlander",
+            "FromFile": "assets/Cows/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+                "Brown Cow": {
+                    "Texture": "{{ModId}}/Brown",
+                    "BabyTexture": "{{ModId}}/BabyBrown"
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+                "White Cow": {
+                    "Texture": "{{ModId}}/White",
+                    "BabyTexture": "{{ModId}}/BabyWhite"
+                }
+            }
+        },
+        {
+            "LogName": "White cow Skins",
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "TargetField": [
+                "White Cow",
+                "Skins"
+            ],
+            "Entries": {
+                "{{ModId}}_Friesian": {
+                    "Id": "{{ModId}}_Friesian",
+                    "Texture": "{{ModId}}/Friesian",
+                    "BabyTexture": "{{ModId}}/BabyFriesian",
+                    "Weight": "1.0"
+                }
+            }
+        },
+        {
+            "LogName": "Brown cow Skins",
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "TargetField": [
+                "Brown Cow",
+                "Skins"
+            ],
+            "Entries": {
+                "{{ModId}}_Highlander": {
+                    "Id": "{{ModId}}_Highlander",
+                    "Texture": "{{ModId}}/Highlander",
+                    "BabyTexture": "{{ModId}}/BabyHighlander",
+                    "Weight": "1.0"
+                }
+            }
+        }
+    ]
+}
