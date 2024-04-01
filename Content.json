@@ -3,9 +3,77 @@
     "ConfigSchema": {},
     "Changes": [
         {
+            "LogName": "Load Goats",
+            "Action": "Load",
+            "Target": "{{ModId}}/Goats/BrownLong, {{ModId}}/Goats/BabyBrownLong, {{ModId}}/Goats/Longear, {{ModId}}/Goats/BabyLongear",
+            "FromFile": "assets/Goats/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+                "Goat": {
+                    "Texture": "{{ModId}}/Goats/BrownLong",
+                    "BabyTexture": "{{ModId}}/Goats/BabyBrownLong"
+                }
+            }
+        },
+        {
+            "LogName": "Goat Skins",
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "TargetField": [
+                "Goat",
+                "Skins"
+            ],
+            "Entries": {
+                "{{ModId}}_Longear": {
+                    "Id": "{{ModId}}_Longear",
+                    "Texture": "{{ModId}}/Goats/Longear",
+                    "BabyTexture": "{{ModId}}/Goats/BabyLongear",
+                    "Weight": "1.0"
+                }
+            }
+        },
+        {
+            "LogName": "Load Sheep",
+            "Action": "Load",
+            "Target": "{{ModId}}/Sheep/Blacknose, {{ModId}}/Sheep/ShearedBlacknose, {{ModId}}/Sheep/BabyBlacknose, {{ModId}}/Sheep/White, {{ModId}}/Sheep/ShearedWhite, {{ModId}}/Sheep/BabyWhite",
+            "FromFile": "assets/Sheep/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+                "Sheep": {
+                    "Texture": "{{ModId}}/Sheep/White",
+                    "HarvestedTexture": "{{ModId}}/Sheep/ShearedWhite",
+                    "BabyTexture": "{{ModId}}/Sheep/BabyWhite"
+                }
+            }
+        },
+        {
+            "LogName": "Sheep Skins",
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "TargetField": [
+                "Sheep",
+                "Skins"
+            ],
+            "Entries": {
+                "{{ModId}}_Blacknose": {
+                    "Id": "{{ModId}}_Blacknose",
+                    "Texture": "{{ModId}}/Sheep/Blacknose",
+                    "HarvestedTexture": "{{ModId}}/Sheep/ShearedBlacknose",
+                    "BabyTexture": "{{ModId}}/Sheep/BabyBlacknose",
+                    "Weight": "1.0"
+                }
+            }
+        },
+        {
             "LogName": "Load Pigs",
             "Action": "Load",
-            "Target": "{{ModId}}/Pink, {{ModId}}/BabyPink, {{ModId}}/BrownKune, {{ModId}}/BabyBrownKune",
+            "Target": "{{ModId}}/Pigs/PinkEars, {{ModId}}/Pigs/BabyPink, {{ModId}}/Pigs/BrownKune, {{ModId}}/Pigs/BabyBrownKune, {{ModId}}/Pigs/WhiteKune, {{ModId}}/Pigs/BabyWhiteKune, {{ModId}}/Pigs/PinkKune, {{ModId}}/Pigs/BabyPinkKune,",
             "FromFile": "assets/Pigs/{{TargetWithoutPath}}.png"
         },
         {
@@ -13,8 +81,8 @@
             "Target": "Data/FarmAnimals",
             "Fields": {
                 "Pig": {
-                    "Texture": "{{ModId}}/Pink",
-                    "BabyTexture": "{{ModId}}/BabyPink"
+                    "Texture": "{{ModId}}/Pigs/PinkEars",
+                    "BabyTexture": "{{ModId}}/Pigs/BabyPink"
                 }
             }
         },
@@ -29,8 +97,20 @@
             "Entries": {
                 "{{ModId}}_BrownKune": {
                     "Id": "{{ModId}}_BrownKune",
-                    "Texture": "{{ModId}}/BrownKune",
-                    "BabyTexture": "{{ModId}}/BabyBrownKune",
+                    "Texture": "{{ModId}}/Pigs/BrownKune",
+                    "BabyTexture": "{{ModId}}/Pigs/BabyBrownKune",
+                    "Weight": "1.0"
+                },
+                "{{ModId}}_WhiteKune": {
+                    "Id": "{{ModId}}_WhiteKune",
+                    "Texture": "{{ModId}}/Pigs/WhiteKune",
+                    "BabyTexture": "{{ModId}}/Pigs/BabyWhiteKune",
+                    "Weight": "1.0"
+                },
+                "{{ModId}}_PinkKune": {
+                    "Id": "{{ModId}}_PinkKune",
+                    "Texture": "{{ModId}}/PinkKune",
+                    "BabyTexture": "{{ModId}}/BabyPinkKune",
                     "Weight": "1.0"
                 }
             }
@@ -38,7 +118,7 @@
         {
             "LogName": "Load Cows",
             "Action": "Load",
-            "Target": "{{ModId}}/Brown, {{ModId}}/BabyBrown, {{ModId}}/White, {{ModId}}/BabyWhite, {{ModId}}/Friesian, {{ModId}}/BabyFriesian,{{ModId}}/Highlander, {{ModId}}/BabyHighlander",
+            "Target": "{{ModId}}/Cows/Brown, {{ModId}}/Cows/BabyBrown, {{ModId}}/Cows/White, {{ModId}}/Cows/BabyWhite, {{ModId}}/Cows/Friesian, {{ModId}}/Cows/BabyFriesian, {{ModId}}/Cows/BrownFriesian, {{ModId}}/Cows/BabyBrownFriesian, {{ModId}}/Cows/Highlander, {{ModId}}/Cows/BabyHighlander",
             "FromFile": "assets/Cows/{{TargetWithoutPath}}.png"
         },
         {
@@ -46,8 +126,8 @@
             "Target": "Data/FarmAnimals",
             "Fields": {
                 "Brown Cow": {
-                    "Texture": "{{ModId}}/Brown",
-                    "BabyTexture": "{{ModId}}/BabyBrown"
+                    "Texture": "{{ModId}}/Cows/Brown",
+                    "BabyTexture": "{{ModId}}/Cows/BabyBrown"
                 }
             }
         },
@@ -56,8 +136,8 @@
             "Target": "Data/FarmAnimals",
             "Fields": {
                 "White Cow": {
-                    "Texture": "{{ModId}}/White",
-                    "BabyTexture": "{{ModId}}/BabyWhite"
+                    "Texture": "{{ModId}}/Cows/White",
+                    "BabyTexture": "{{ModId}}/Cows/BabyWhite"
                 }
             }
         },
@@ -72,8 +152,14 @@
             "Entries": {
                 "{{ModId}}_Friesian": {
                     "Id": "{{ModId}}_Friesian",
-                    "Texture": "{{ModId}}/Friesian",
-                    "BabyTexture": "{{ModId}}/BabyFriesian",
+                    "Texture": "{{ModId}}/Cows/Friesian",
+                    "BabyTexture": "{{ModId}}/Cows/BabyFriesian",
+                    "Weight": "1.0"
+                },
+                "{{ModId}}_BrownFriesian": {
+                    "Id": "{{ModId}}_BrownFriesian",
+                    "Texture": "{{ModId}}/Cows/BrownFriesian",
+                    "BabyTexture": "{{ModId}}/Cows/BabyBrownFriesian",
                     "Weight": "1.0"
                 }
             }
@@ -94,6 +180,18 @@
                     "Weight": "1.0"
                 }
             }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/heads.png",
+            "ToArea": {
+                "X": 0,
+                "Y": 448,
+                "Width": 96,
+                "Height": 48
+            },
+            "PatchMode": "Replace"
         }
     ]
 }
