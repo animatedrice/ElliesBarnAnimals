@@ -1,13 +1,14 @@
 {
-    "Name": "Ellie's Animals",
-    "Author": "AnimatedRice",
-    "Version": "1.0.0",
-    "Description": "Adds new skins for farm animals!",
-    "UniqueID": "AnimatedRice.Farmanimals",
-    "UpdateKeys": [
-      "GitHub:AnimatedRice/StardewMods"
-    ],
-    "ContentPackFor": {
-      "UniqueID": "Pathoschild.ContentPatcher"
-    }
+  "Name": "Ellie's Animals",
+  "Author": "AnimatedRice",
+  "Version": "1.0.3",
+  "MinimumApiVersion": "4.0.0",
+  "Description": "Adds new skins for farm animals!",
+  "UniqueID": "AnimatedRice.Farmanimals",
+  "UpdateKeys": [
+    "GitHub:AnimatedRice/StardewMods"
+  ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
   }
+}
