@@ -9,3 +9,7 @@ Will add more skins in the future.
 ### Requirements
 * SMAPI (4.0 or up)
 * Content Patcher
+
+### Download
+
+[Download](https://github.com/animatedrice/ElliesBarnAnimals/releases) 
